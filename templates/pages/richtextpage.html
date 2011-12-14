@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load mezzanine_tags %}
+
+{% block main %}
+ <div class="inner_right_panel" >
+{% editable page.richtextpage.content %}
+{{ page.richtextpage.content|richtext_filter|safe }}
+{% endeditable %}
+</div>
+<div class = "clear"> </div>
+{% endblock %}

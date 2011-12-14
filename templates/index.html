@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+
+{% block title %}
+{% trans "Home" %}
+{% endblock %}
+
+
+
+{% block main %}
+<div class="maincontent">
+  <!-- left panel -->
+  <div class="left_panel martop">
+    <div class="videoplayer"><img src="{{MEDIA_URL}}images/video_player.gif" alt="Video" /></div>
+    <a href="#" class="blue italic georgia bold fl_right">View More Videos ></a>
+    <div class="clear"></div>
+    <div class="latest_tips_banner"><img src="{{MEDIA_URL}}images/latest_tips_banner.gif" alt="The Latest and Greatest Beauty Tips from Amanda"/></div>
+    <div class="learnmore_banner"><img src="{{MEDIA_URL}}images/learn_more_banner.gif" alt="Reach your goals with Amanda Russell program"/></div>
+    <div class="photos_banner"><img src="{{MEDIA_URL}}images/photos_banner.gif" alt="View more photos of Amanda Russell"/></div>
+  </div>
+  <!-- left panel ends-->
+  <!-- right panel -->
+  <div class="right_panel martop">
+    <div class="upcoming_events"> <img src="{{MEDIA_URL}}images/upcoming_events_title.gif" width="300" height="50" alt="Upcoming Events" /></div>
+    <img src="{{MEDIA_URL}}images/events_img.gif" alt="Join Amanda for her AR Program at the Sports Center at Chelsea Piers!" />
+    <h2 class="martop">Join Amanda for her AR Program at the Sports Center at Chelsea Piers!</h2>
+    <p><span class="bold">WHAT: </span>Olympic-trained, Celebrity Fitness Expert and Model, Amanda Russell has defined the new age of fitness and wellness, creating the AR Program, a holistic mind and body system of intense dynamic workouts designed to transform the body by focusing on secrets athletes have known for years.</p>
+    <p>Amanda Russell combines her running expertise with athletic training to create one hour of high intensity interval training fusing plyometrics, bodyweight strength training and power yoga poses. Highly challenging and specifically designed to get you into the shape of your life!com</p>
+    <p><span class="bold">WHEN: </span>Wednesday, November 30th 7:00�8:00pm</p>
+    <p><span class="bold">COST:</span> $30 fee per class  (Discount available for Sports Center Members) </p>
+    <p><span class="bold">MORE INFO: </span><br/>
+      <span class="blue bold">contact@amandarussellworkouts.</span></p>
+    <p><span class="blue italic georgia bold">Register here >></span></p>
+    <!-- twitter widget starts here -->
+    <div class="twitter_widget"><img src="{{MEDIA_URL}}images/twitter_widget.gif" width="300" height="390" alt="twitter widget" /></div>
+    <!-- twitter widget ends here -->
+  </div>
+</div>
+
+{% endblock %}

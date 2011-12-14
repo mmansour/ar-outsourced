@@ -1,0 +1,31 @@
+{% load i18n pages_tags %}
+
+{% spaceless %}
+{% if page_branch %}
+
+	{% for pages in page_branch %}
+
+          {% if pages.is_primary %}
+            <ul>
+            {% endif %}
+{% if  pages.parent  == parentpage.parent or pages == parentpage.parent   %}
+	{% if pages.in_navigation %}
+	    {% if not pages.is_primary %}
+	<li class="{% if pages.title == parentpage.title %}active{% endif %}"
+
+        id="tree-menu-{{ pages.html_id }}">
+		<a href="{% if pages.dropdownelement %}{% url page pages.dropdownelement.children.published.0.slug %}{%else %}{% url page pages.slug %}{% endif %}">{%if pages.parent == parentpage.parent %}{{ pages.title }}{% endif %}</a>
+		
+		{% endif %}
+		{% page_menu pages %}
+		</li>
+    {% endif %}
+	{% endif %}
+
+	{% endfor %}
+ {% if pages.is_primary %}
+            </ul>
+            {% endif %}
+
+{% endif %}
+{% endspaceless %}

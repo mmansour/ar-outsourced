@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+
+
+{% load pages_tags %}
+
+{% block leftpanel %}
+
+{% if parentpage.parent.children.published %}
+<div class = "inner_left_panel">
+  <ul>
+    {% for pages in parentpage.parent.children.published %}
+    
+    <li {% if parentpage.title == pages.title %} class = "active"{% endif %}>  <a href = "{% url page pages.slug %}">{{ pages.title }} </a> </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block main %}
+
+{% autoescape off %}
+
+<div class = "inner_right_panel" >
+  <h1> {{ page.individualworkout.title }}</h1>
+  <div class = "article_header">{% editable page.individualworkoutpage.image %}
+{% thumbnail page.individualworkoutpage.image "640x480" as im %}
+	    <img src ="{{ im.url }}"  /></a>
+	  {% endthumbnail %}{% endeditable %}</div>
+           
+  <div class = "article_content"> {% editable page.individualworkoutpage.article %}{{ page.individualworkoutpage.article|safe }}{% endeditable %}
+    <div class = "steps">
+      {% for step in all_steps %}
+      <div class = "step_desc">
+	<h3 class="georgia italic">{{ step.title }}</h3>
+	<p> {{ step.text }}</p>
+      </div>
+      <div class="step_img"><img src="{{step.image.url}}" width="310" height="150" alt="Workouts_small banner" /></div>
+      <p class="clear"></p>
+                        
+    
+    {% endfor %}
+    </div>
+  </div>
+  <a href="{% url page parentpage.slug %}" class="fl_left martop"> <<  Back to Workouts</a>
+</div>
+
+
+    
+   
+<div class="clear"></div>
+  <!-- left panel ends-->   
+
+</div>
+
+{% endautoescape %}
+{% endblock %}

@@ -1,0 +1,209 @@
+/*------------------------------------------------------------------------------------------
+	Theme Name: AMANDA RUSSELL
+	Theme URL: 
+	Description: Fitness and Lifestyle website
+	Author: Saikiran 
+	Author URL: http://www.agiliq.com
+	Version: 1.0	
+	Handcrafted by Saikiran
+	
+	1.	DOCUMENT SET UP (body, common classes, vertical rhythm, structure etc)
+	2.	HEADER STYLES
+	3.	NAVIGATION AND MENUS
+	4.	MAIN CONTENT STYLES
+	5.	PAGE CONTENT STYLES
+	6.	FOOTER STYLES
+	7.	RECORDED CONFERENCES PAGE 
+	8.	RECORD VIDEO AND FILE TEST PAGES
+	9.	DIGISIGN 
+	10.	SCHEDULE A NETCONFERENCE FORM  
+	11.	MY CONFERENCES     
+	12. MY CONFERENCES MENU STARTS       
+------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------------------
+1. 	Document Setup (body, common classes, vertical rhythm, structure etc) -----------------
+------------------------------------------------------------------------------------------*/
+body{ background-color:#f3f3f3; font:12px Tahoma, Arial, Verdana, Sans-serif; line-height:16px; }
+.pagewrap{ background:url("../images/background.png") repeat-y; padding: 10px 15px 0px 15px; width:960px; margin:0px auto; }
+
+.bottom_shadow{clear:both; width:990px; margin:0px auto; background: url("../images/bottom_bg.png") no-repeat; height:24px;}
+p{ font:12px Tahoma, Arial, Verdana, Sans-serif; line-height:16px; margin:3px 0 8px 0;}
+p.copyright{font:11px Tahoma, Arial, Verdana, Sans-serif; color:#999999; line-height:40px; text-align:center; clear:both;}
+/*-----------------------------------------------------------------------------------------
+2. 	Header styles                                                         -----------------
+------------------------------------------------------------------------------------------*/
+div.header{ }
+div.header .logo{ width:243px; height:138px; float:left; margin:10px 0 0 25px; }
+div.header .socialmedia{width:250px; float:right;}
+div.header .socialmedia ul{margin:0px; padding:0px; float:right; margin:110px 24px 0 0;}
+div.header .socialmedia ul li{display:inline; margin:0 0 0 15px;}
+
+h1 { font-size:26px; background:#fff200; font-family: Arial,Helvetica,Tahoma,sans-serif; text-transform:uppercase; font-weight:600;padding:10px; margin-bottom:20px; }
+h2 { font-family: Georgia, Helvetica, Arial, sans-serif; font-size:13px; font-weight:bold; font-style:italic; line-height:18px; color:#00aeef; margin:10px 0 10px 0;}
+h3 { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;  color:#1bace3; line-height:18px;}
+h4 { font-family: 'HelveticaNeueLTStd77BdCn', Helvetica, Arial, sans-serif; font-size:14px; }
+h5 { font-family: Arial, sans-serif; font-size:14px; line-height:24px; }
+h6 { font-family:  Arial, sans-serif; font-size:14px;  }
+/*-----------------------------------------------------------------------------------------
+3. 	Navigation styles                                                     -----------------
+------------------------------------------------------------------------------------------*/
+
+div.topnav{clear:both; width:960px; margin:0px auto; margin:15px 0 0px 0; display:block;height:37px;:url(../images/nav_bg.png) repeat-x; height:37px;}
+
+
+/*-----------------------------------------------------------------------------------------
+4. 	Main Content styles                                                     -----------------
+------------------------------------------------------------------------------------------*/
+.maincontent{clear:both; width:960px; }
+.left_panel{width:600px; float:left; margin-left:20px;}
+.right_panel{width:300px; float:right;  margin-right:20px;}
+.inner_left_panel{width:100px; float:left; padding-left:20px; background:url("../images/bg_leftpanel.png") repeat-x; min-height:900px;}
+.inner_left_panel ul{margin-top:90px;}
+.inner_left_panel ul li{margin-bottom:15px;  cursor:pointer;}
+.inner_left_panel ul li a{color:#000;padding-left:10px; line-height:30px;}
+.inner_left_panel ul li a:hover{color:#000;}
+.inner_left_panel ul li:hover{background:#fff; }
+.inner_left_panel ul li.active{background:#fff;}
+.inner_right_panel{width:790px; float:right;  padding-left:50px; padding-top:20px;}
+.videoplayer{width:600px; min-height:380px; display:block; clear:both;}
+.latest_tips_banner{width:600px; height:101px; display:block; cursor:pointer;  clear:both; margin-top:18px;}
+.learnmore_banner{width:600px; height:281px; display:block;cursor:pointer; margin-top:10px;  clear:both;}
+.photos_banner{width:600px; height:145px; display:block; cursor:pointer; margin-top:10px;  clear:both;}
+.upcoming_events{width:300px;}
+.twitter_widget{width:300px;}
+.image_grid{margin:0px; padding:0px;}
+.image_grid ul{margin:0px; padding:0px;}
+.image_grid ul li{width:350px; height:150px; display:block;  float:left; margin:20px 20px 20px 0px; }
+.img_desc{width:180px;  padding:0 10px 0 10px; float:right; }
+.small_thumb{width:138px; height:138px; float:left; }
+.article_header{width:620px;  display:block; margin-bottom:20px;}
+.article_content{width:610px;}
+.article_content ol{margin:10px 0 0 30px}
+.article_content ol li{ list-style-type:decimal; }
+.article_content ul{margin:10px 0 0 30px}
+.article_content ul li{ list-style-type:disc; }
+.steps{width:610px; clear:both; display:block; margin-top:20px;}
+.steps .step_desc{width:280px; float:left; margin-right:10px; min-height:150px; margin-top:10px;}
+.steps .step_img{width:310px; float:right;margin-top:10px; }
+
+/*-----------------------------------------------------------------------------------------
+6. 	Footer styles                                                         -----------------
+------------------------------------------------------------------------------------------*/
+div#footer{width:960px;padding: 10px 15px 0px 15px; margin:0px auto; clear:both;}
+div#footer ul {width:118px; float:left;}
+div#footer ul li{font-family:Georgia, "Times New Roman", Times, serif; font-size:11px; font-style:italic; color:#808080; line-height:18px; }
+div#footer ul li a{ color:#808080;}
+div#footer ul li a:hover{color:#000;}
+/*-----------------------------------------------------------------------------------------
+6. 	Drop Down Menus                                                     -----------------
+------------------------------------------------------------------------------------------*/
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; margin-left:-1px; }
+ul.dropdown li                      {  float: left; zoom: 1;  width:120px; background:url(../images/nav_bg.png) repeat-x; height:37px; line-height:37px; }
+ul.dropdown li.active      {  float: left; zoom: 1;  width:120px; background:url(../images/nav_bg.png) 0px -37px; height:37px; line-height:37px; }
+ul.dropdown a:hover		            { color: #000;  }
+ul.dropdown a:active                { color: #ffa500; }
+ul.dropdown li a                    { display: block;  border-right: 1px solid #86888a;  border-left: 1px solid #bdbec1;text-align:center;	  color: #fff; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background:url(../images/nav_bg.png) 0px -37px; color: black; position: relative; }
+ul.dropdown li.hover a              { color: #fff; }
+
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #808080; color: #fff; 
+									  border-bottom: 1px solid #fff; float: none; }
+ul.dropdown ul li :hover{			background: #1aace3; color: #fff; }						  
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+/*-----------------------------------------------------------------------------------------
+10. Miscelleaneous styles                                                         -----------------
+------------------------------------------------------------------------------------------*/
+a{ text-decoration: none; color:#1BACE3; }
+a:hover{ text-decoration: none; color:#000; }
+ul		{ list-style: none; }
+.martop{margin-top:20px;}							
+.clear{clear:both;}
+.bold{font-weight:bold;}
+.blue{color:#00aeef; text-decoration:none;}
+.blue:hover{color:#000; text-decoration:none; cursor:pointer;}
+.italic{font-style:italic;}
+.georgia{ font-family: Georgia, Helvetica, Arial, sans-serif; font-size:12px; font-style:italic; line-height:18px; }
+.fl_right{float:right;}
+.fl_left{float:left;}
+
+
+/* Pagination DIV */
+#pg
+{
+width: 700px;
+background-color: #FFFFFF;
+
+text-align: center;
+font-size: 10px;
+
+margin-bottom: 5px;
+
+padding: 10px;
+}
+
+/* Pagination Link */
+
+#pg a {
+font-size: 11px;
+font-weight:bold;
+text-decoration: none;
+color: #2ab2e5;
+padding: 3px;
+-moz-border-radius: 3px;
+margin:0 3px 0 3px;
+clear:both;
+}
+
+#pg a:hover {
+font-size: 11px;
+text-decoration: none;
+color: #000000;
+
+background-color: white;
+padding: 3px;
+-moz-border-radius: 3px;
+}
+
+/* Pagination Current Page */
+
+#pg a.current {
+font-size: 11px;
+text-decoration: none;
+font-weight: bold;
+color: #000000;
+text-decoration:underline;
+padding: 3px;
+-moz-border-radius: 3px;
+}
+
+/* Pagination Disabled Page */
+
+#pg span.disabled {
+font-size: 10px;
+text-decoration: none;
+color: #C6C7C7;
+border: 1px solid #C6C7C7;
+background-color: white;
+padding: 3px;
+-moz-border-radius: 3px; // Rounds the corners; Works for Mozilla only
+}

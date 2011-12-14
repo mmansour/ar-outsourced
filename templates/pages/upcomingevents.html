@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+{% block main %}
+
+{% autoescape off %}
+<div class="maincontent">
+  <!-- left panel -->       
+
+  <div class = "inner_right_panel" >
+    {% if page.upcomingevents.image_1 and page.upcomingevents.text_1 %}
+    <div class = "left">{% editable page.upcomingevents.image_1 %}{{page.upcomingevents.image_1|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_1 %}{{page.upcomingevents.text_1|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_2 and page.upcomingevents.text_2 %}
+     <div class = "left">{% editable page.upcomingevents.image_2 %}{{page.upcomingevents.image_2|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_2 %}{{page.upcomingevents.text_2|safe}}{% endeditable %}
+     </div>
+    <p class="clear"> </p>
+    {% endif %}
+    {% if page.upcomingevents.image_3 and page.upcomingevents.text_3 %}
+    <div class = "left">{% editable page.upcomingevents.image_3 %}{{page.upcomingevents.image_3|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_3 %}{{page.upcomingevents.text_3|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_4 and page.upcomingevents.text_4 %}
+    <div class = "left">{% editable page.upcomingevents.image_4 %}{{page.upcomingevents.image_4|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_4 %}{{page.upcomingevents.text_4|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_5 and page.upcomingevents.text_5 %}
+    <div class = "left">{% editable page.upcomingevents.image_5 %}{{page.upcomingevents.image_5|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_5 %}{{page.upcomingevents.text_5|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_6 and page.upcomingevents.text_6 %}
+    <div class = "left">{% editable page.upcomingevents.image_6 %}{{page.upcomingevents.image_6|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_6 %}{{page.upcomingevents.text_6|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_7 and page.upcomingevents.text_7 %}
+    <div class = "left">{% editable page.upcomingevents.image_7 %}{{page.upcomingevents.image_7|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_7 %}{{page.upcomingevents.text_7|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_8 and page.upcomingevents.text_8 %}
+    <div class = "left">{% editable page.upcomingevents.image_8 %}{{page.upcomingevents.image_8|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_8 %}{{page.upcomingevents.text_8|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_9 and page.upcomingevents.text_9 %}
+    <div class = "left">{% editable page.upcomingevents.image_9 %}{{page.upcomingevents.image_9|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_9 %}{{page.upcomingevents.text_9|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_10 and page.upcomingevents.text_10 %}
+    <div class = "left">{% editable page.upcomingevents.image_10 %}{{page.upcomingevents.image_10|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_10 %}{{page.upcomingevents.text_10|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_11 and page.upcomingevents.text_11 %}
+    <div class = "left">{% editable page.upcomingevents.image_11 %}{{page.upcomingevents.image_11|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_11 %}{{page.upcomingevents.text_11|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+     {% if page.upcomingevents.image_12 and page.upcomingevents.text_12 %}
+    <div class = "left">{% editable page.upcomingevents.image_12 %}{{page.upcomingevents.image_12|safe}}{% endeditable %}</div>
+     <div class = "right">
+       {% editable page.upcomingevents.text_12 %}{{page.upcomingevents.text_12|safe}}{% endeditable %}
+     </div>
+     <p class="clear"> </p>
+     {% endif %}
+  </div>
+  <div class="clear"></div>
+  <!-- left panel ends-->   
+
+</div>
+
+{% endautoescape %}
+{% endblock %}

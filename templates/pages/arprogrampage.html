@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+
+
+
+
+
+{% block main %}
+
+{% autoescape off %}
+
+
+
+  <div class = "inner_right_panel" >
+    <h1> {{page.arprogrampage.title}} </h1>
+    <div class = "ar_video">
+      {% editable page.arprogrampage.youtube_url %}{{ page.arprogrampage.youtube_url|safe }}{% endeditable %}
+    </div>
+    <div class = "article_content" >
+      {% editable page.arprogrampage.text %}{{page.arprogrampage.text|safe}}{% endeditable %}
+    </div>
+  </div>
+  <div class="clear"></div>
+
+
+
+
+{% endautoescape %}
+{% endblock %}
+

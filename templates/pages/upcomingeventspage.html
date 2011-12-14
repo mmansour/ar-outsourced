@@ -1,0 +1,30 @@
+
+
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+
+{% block main %}
+
+{% autoescape off %}
+
+  <!-- left panel -->       
+
+  <div class = "inner_right_panel" >
+   <h1> {{ page.title }} </h1>
+ 
+   <div class = "upcomingevents">
+     {% for event in page.upcomingeventspage.upcomingevent_set.all %}
+     <div class = "left">{% editable event.image%} {{ event.image|safe }}{% endeditable %}</div>
+     <div class = "right" > {% editable event.text %}{{ event.text|safe }} {% endeditable %} </div>
+     <p class = "clear"></p>
+     {% endfor %}
+   </div>
+    <div class="clear"></div>
+  <!-- left panel ends-->   
+
+ </div>
+ <div class = "clear"> </div>
+
+
+{% endautoescape %}
+{% endblock %}

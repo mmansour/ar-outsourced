@@ -1,0 +1,27 @@
+{% load i18n pages_tags %}
+
+{% spaceless %}
+{% if page_branch %}
+<ul class="tree-menu-level-{{ branch_level }}">
+	{% for pages in page_branch %}
+
+    
+	
+	{% if pages.in_navigation %}
+	<li class="{% if pages == page.parent or pages == parentpage.parent or pages.title == mypage.title %}{% if pages.is_primary %}active{% endif %}{% endif %}"
+
+        id="tree-menu-{{ pages.html_id }}">
+		<a href="{% if pages.dropdownelement %}{% url page pages.dropdownelement.children.published.0.slug %}{%else %}{% url page pages.slug %}{% endif %}">{{ pages.title }}</a>
+		{# remove this if tag to always show all nav items #}
+		{% if settings.PAGES_MENU_SHOW_ALL or page.is_current_or_ascendant %}
+		{% if pages.is_primary  %}
+		{% page_menu pages %}
+		{% endif %}
+		{% endif %}
+	</li>
+    {% endif %}
+
+	{% endfor %}
+</ul>
+{% endif %}
+{% endspaceless %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+{% load pagination_tags %}
+
+{% load thumbnail %}
+{% block title %}Weightloss |AMANDA RUSSEL - All Things Fitness and Lifestyle{% endblock %}
+{% block main %}
+
+{% autoescape off %}
+<div class="inner_right_panel">
+  <h1>{{ page.title }} </h1>
+  {% autopaginate all_weightloss  10  %}  
+  <div class = "image_grid">
+    <ul>
+      {% for weightloss in all_weightloss %}
+      <li>
+	<div class = "small_thumb" style = "width:138px;"> <a href = "{% url page weightloss.slug %}">
+	    {% thumbnail weightloss.image "138x138" as im %}
+	    <img src ="{{ im.url }}"  />
+	    {% endthumbnail %}
+	  </a>
+	</div>
+	<div class = "img_desc">
+	  <a href = {% url page weightloss.slug %}><h3> {{ weightloss.title }} </h3> </a>
+	  <div style = "height:60px;overflow:hidden"> {{ weightloss.article|truncatewords_html:15  }}</div>
+	  <span class="georgia italic bold blue"><a href="{% url page weightloss.slug %}">Read more &raquo;</a></span> 
+	</div>
+	
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% paginate %}
+</div>
+
+<div class="clear"></div>
+{% endautoescape %}
+{% endblock %}

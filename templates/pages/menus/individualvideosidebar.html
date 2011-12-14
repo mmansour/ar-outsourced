@@ -1,0 +1,34 @@
+{% load i18n pages_tags %}
+
+{% spaceless %}
+
+{% if page_branch %}
+
+	{% for pages in page_branch %}
+
+          {% if pages.is_primary %}
+            <ul>
+            {% endif %}
+{% if pages.title == videopage.title or pages == videopage.children.published.0 or pages == videopage.children.published.1 or pages == videopage.children.published.2 or pages == videopage.children.published.3 or pages == videopage.children.published.4 or pages == videopage.children.published.5 or pages == videopage.children.published.6  %}
+
+	{% if pages.in_navigation %}
+	    {% if not pages.is_primary %}
+	<li class="{% if pages.title == parentpage.title %}active{% endif %}"
+
+        id="tree-menu-{{ pages.html_id }}">
+		<a href="{% if pages.dropdownelement %}{% url page pages.dropdownelement.children.published.0.slug %}{%else %}{% url page pages.slug %}{% endif %}">{%if not pages.title == videopage.title %}{{ pages.title }}{% endif %}</a>
+		
+		{% endif %}
+		{% page_menu pages %}
+		</li>
+
+	{% endif %}
+{% endif %}
+
+	{% endfor %}
+ {% if pages.is_primary %}
+            </ul>
+            {% endif %}
+
+{% endif %}
+{% endspaceless %}

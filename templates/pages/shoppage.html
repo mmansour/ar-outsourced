@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+{% block leftpanel %}
+
+
+<div class = "inner_left_panel">
+  <ul>
+
+    
+    <li class = "active">  <a href = "{% url page page.slug %}">Shop </a> </li>
+
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+{% autoescape off %}
+
+
+  <div class = "inner_right_panel" >
+    <h1> Coming Soon </h1>
+
+  </div>
+<div class = "clear"> </div>
+</div>
+{% endautoescape %}
+{% endblock %}

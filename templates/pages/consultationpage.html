@@ -1,0 +1,49 @@
+
+
+
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+
+
+
+
+
+{% block main %}
+
+{% autoescape off %}
+
+  <!-- left panel -->       
+
+  <div class = "inner_right_panel" >
+    <div class="upcomingevents"> 
+      <div class = "left">{% editable page.consultationpage.article %}{{ page.consultationpage.article|safe }}{% endeditable %}</div>
+      <div class = "right"> 
+	<h2> Request a Consultation </h2>
+
+	<form method = "POST" action = "">	{% csrf_token %}
+	  {% for field in consultationform %}
+	  <label>{{ field.label }}</label>
+	  {{ field.errors }}
+          {{ field }}
+	  {% endfor %}
+	  <input type="submit" value="Send" class="send_btn fl_right" />
+
+	  </form>
+<script> 	$("input[type=text]").addClass("textfield") </script>
+	<div class = "clear"></div>
+	<div class  = "box_shadow">
+	  <blockquote class="consultation">{% editable page.consultationpage.testimonial_text %}{{ page.consultationpage.testimonial_text|safe }}{% endeditable %}</blockquote>
+	  - {{ page.consultationpage.testimonial_by }} <a href = "{{ page.consultationpage.Testimonial_by_url }}"> {{ page.consultationpage.Testimonial_by_url }} </a>
+	</div>
+	<p class = "clear"> </p>
+      </div>
+    </div>
+</div>
+
+  <div class="clear"></div>
+  <!-- left panel ends-->   
+
+
+
+{% endautoescape %}
+{% endblock %}

@@ -1,0 +1,6 @@
+
+Mezzanine==0.11.10
+sorl-thumbnail
+south
+django-pagination
+MySQL-python

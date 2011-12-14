@@ -1,0 +1,145 @@
+{% load pages_tags mezzanine_tags i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" /> 
+    <meta name="description" content="{% block meta_description %}{% endblock %}" /> 
+    <title>{% block title %}AMANDA RUSSEL - All Things Fitness and Lifestyle{% endblock %}</title>
+
+    {% if "mezzanine.blog"|is_installed %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" 
+        href="{% url blog_post_feed "rss" %}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom"  
+        href="{% url blog_post_feed "atom" %}" />
+    {% endif %}
+
+   
+    {% block extra_head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/global.css"/>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/jquery-1.3.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="{{MEDIA_URL}}js/jquery.dropdownPlain.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/ie7.css">
+        <![endif]-->
+    <!--[if gt IE 7]>
+        <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/ie8-and-up.css" />
+        <![endif]-->
+    <script type="text/javascript" src="{{MEDIA_URL}}fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <link rel="stylesheet" href="{{MEDIA_URL}}fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      /* This is basic - uses default settings */
+
+      $("a#single_image").fancybox();
+
+      /* Using custom settings */
+
+      $("a#inline").fancybox({
+      'hideOnContentClick': true
+      });
+
+      /* Apply fancybox to multiple items */
+
+      $("a.fancybox").fancybox({
+      'transitionIn':'elastic',
+      'transitionOut':'elastic',
+      'speedIn':600, 
+      'speedOut':200, 
+      'overlayShow':false
+      });
+
+      });
+    </script>
+		<script type="text/javascript">
+		  $(document).ready(function() {
+		  
+		  //When page loads...
+		  $(".tab_content").hide(); //Hide all content
+		  $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+		  $(".tab_content:first").show(); //Show first tab content
+
+		  //On Click Event
+		  $("ul.tabs li").click(function() {
+			
+		  $("ul.tabs li").removeClass("active"); //Remove any "active" class
+		  $(this).addClass("active"); //Add "active" class to selected tab
+		  $(".tab_content").hide(); //Hide all tab content
+
+		  var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		  $(activeTab).fadeIn(); //Fade in the active ID content
+		  return false;
+		  });
+			
+		  });
+		</script>
+
+</head>
+<body id="{% block body_id %}{% endblock %}">
+  
+  <div class="pagewrap">
+    <div class="header">
+      <div class="logo"><a href="/"><img src="{{MEDIA_URL}}images/amandarussel_logo.gif" alt="Amanda Russel Logo" /></a></div>
+      <div class="socialmedia">
+	<ul>
+	  <li><a href="http://www.facebook.com/arussellfit"><img src="{{MEDIA_URL}}images/facebook_icon.gif" alt="Facebook" /></a></li>
+	  <li><a href="http://twitter.com/#!/arFit"><img src="{{MEDIA_URL}}images/twitter_icon.gif" alt="Twitter" /></a></li>
+	  <li><a href="http://www.youtube.com/user/AmandaRussell"><img src="{{MEDIA_URL}}images/youtube_icon.gif" alt="Youtube" /></a></li>
+	</ul>
+      </div>
+      <p class="clear"></p>
+      
+    </div>
+    
+
+    <div class="top-nav">
+      {% page_menu "pages/menus/tree.html" %}
+    </div>
+    <div class ="maincontent">
+      {% block leftpanel %}
+
+
+      <div class = "inner_left_panel">
+	  {% page_menu "pages/menus/sidebar.html" %}
+      </div>
+      
+      {% endblock %}
+    {% block main %}
+    
+    
+    {% endblock %}
+
+    </div>
+</div>
+
+<div class="bottom_shadow"></div>
+    
+    <div id = "footer" >
+      {% page_menu "pages/menus/footer.html" %}
+    </div>
+    
+    
+
+ <p class="copyright">&copy; 2011 Amanda Russell Inc. All rights reserved.</p>
+
+
+    {% include "includes/footer_scripts.html" %}
+ 
+
+<script type ="text/javascript">
+$("iframe").each(function(){
+      var ifr_source = $(this).attr('src');
+      var wmode = "?wmode=transparent";
+      $(this).attr('src',ifr_source+wmode);
+});
+</script>
+{% editable_loader %}
+</body>
+</html>
+

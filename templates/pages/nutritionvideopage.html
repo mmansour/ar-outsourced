@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+ {% load pagination_tags %}
+
+{% block main %}
+
+{% autoescape off %}
+<div class="inner_right_panel">
+  <h1>{{ page.title }} </h1>
+  
+  <div class = "ar_video"  >
+    {{ featured_video.video }}
+  </div>
+  <div class ="article_content">
+    <a href = "{% url page featured_video.slug %}"><h2 class="martop">{{ featured_video.title }}</h2></a>
+    <span class = "bold">Uploaded {{ featured_video.uploaded_date }}</span>
+    <p>{{ featured_video.video_description|slice:"120" }}</p>
+  </div>
+  {% if videos %}
+  <div class = "morevideos">
+    <h3 class = "georgia"> More Videos </h3>
+    <hr/>
+    <ul>
+      {% autopaginate videos 6 %}
+      {% for video in videos %}
+      <li> {{ video.video }} 
+       <a href = "{% url page video.slug %}"<h3 class="blue">{{ video.title }}</h3>
+      </li>
+      {% endfor %}
+    </ul>
+    <hr class = "clear"/>      
+    </div>
+    {% endif %}
+<script type="text/javascript"> $(".morevideos iframe").width("200px");$(".morevideos iframe").height("115px");</script>
+
+{% paginate %}
+</div>
+ 
+
+<div class="clear"></div>
+{% endautoescape %}
+{% endblock %}

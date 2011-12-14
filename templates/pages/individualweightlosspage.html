@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+{% load thumbnail %}
+{% block leftpanel %}
+
+{% if parentpage.parent.children.published %}
+<div class = "inner_left_panel">
+  <ul>
+    {% for pages in parentpage.parent.children.published %}
+    <li {% if parentpage.title == pages.title %} class = "active"{% endif %}>  <a href = "{% url page  pages.slug %}">{{ pages.title }} </a> </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endblock %}
+{% block main %}
+{% autoescape off %}
+<div class = "inner_right_panel" >
+  <h1> {{ page.title }} </h1>
+  <div class = "article_header">{% editable page.individualweightlosspage.image %}
+{% thumbnail page.individualweightlosspage.image "640x480" as im %}
+	    <img src ="{{ im.url }}"  /></a>
+{% endthumbnail %}
+
+{% endeditable %}</div>
+  <div class = "article_content">
+    {% editable page.individualweightlosspage.article %}{{ page.individualweightlosspage.article|safe }}{% endeditable %}
+  </div>
+  <a href="{% url page parentpage.slug %}" class="fl_left martop">« Back to Weight Loss</a>
+</div>
+<div class = "clear"> </div>
+
+{% endautoescape %}
+{% endblock %}

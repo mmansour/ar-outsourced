@@ -1,0 +1,19 @@
+{% load i18n pages_tags %}
+
+{% spaceless %}
+{% for page in page_branch %}
+  
+    
+
+    {% if page.in_footer %}
+    {% if page.is_primary %}<ul > {% else %}<li> {% endif %} <a href = "{% if page.dropdownelement %}{% url page page.children.published.0.slug  %}{% else %}/{{page.slug}}{% endif %}">{{ page.title }}</a>
+
+    {% page_menu page %}
+      {% if page.is_primary %}</ul> {% else %}</li> {% endif %}
+    {% endif %}
+
+
+    
+
+{% endfor %}
+{% endspaceless %}

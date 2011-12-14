@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load mezzanine_tags %}
+
+{% block main %}
+
+{% autoescape off %}
+<div class="inner_right_panel">
+  <!-- left panel -->       
+  <h1>Contact</h1>
+  <div class = "contact_page">
+    <div class = "left">
+      <h2> Send a Message </h2>
+      {% csrf_token %}
+      <form action = "" method = "POST"> {% csrf_token %}
+	{% for field in contactform %}
+	  <label>{{ field.label }}</label>
+          {{ field }}
+	  {{ field.errors }}
+	  {% endfor %}
+      	<input type="Submit" value="Send" class="send_btn fl_right" />
+      </form>
+    </div>
+
+    <div class="right">
+      <h2>Follow Amanda Russell</h2>
+      <a href="http://youtube.com/user/AmandaRussell">YouTube.com/user/AmandaRussell</a>
+      <a href="http://www.facebook.com/arussellfit">Facebook.com/ARussellFit</a>
+      <a href="http://twitter.com/arFit">Twitter.com/arFit</a>
+    <p class="clear"></p>
+  </div>
+  </div>
+
+</div>
+<div class = "clear"> </div>
+<script> 	$("input[type=text]").addClass("textfield"); 	$("select").addClass("textfield");	$("textarea").width("95%") </script>
+
+
+{% endautoescape %}
+{% endblock %}
+
