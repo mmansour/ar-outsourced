@@ -193,7 +193,7 @@ class ConsultationPage(Page):
                                          blank=True, null=True)
 
     def __unicode__(self):
-        return self.name
+        return self.title
 
 
 class ShopPage(Page):
