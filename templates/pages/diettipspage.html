@@ -2,7 +2,7 @@
 
 {% load mezzanine_tags %}
 {% load pagination_tags %}
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 {% block main %}
 
 {% autoescape off %}
@@ -13,11 +13,9 @@
     <ul>
       {% for diet in all_diettips %}
       <li>
-	<div class = "small_thumb" style = "width:138px;"> <a href = "{% url page diet.slug %}">
-	    {% thumbnail diet.image "138x138" as im %}
-	    <img src ="{{im.url}}"  /></a>
-	  {% endthumbnail %}
-	  </div>
+	<div class="small_thumb" style="width:138px;">
+        <a href="{% url page diet.slug %}"><img src ="{{ MEDIA_URL }}{% thumbnail diet.image 138 138 %}"/></a>
+	</div>
 
 	<div class = "img_desc">
 	  <a href = {% url page diet.slug %}><h3> {{ diet.title }} </h3> </a>

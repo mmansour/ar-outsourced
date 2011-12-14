@@ -5,18 +5,17 @@
 
 {% load pagination_tags %}
 {% load pages_tags %}
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 {% block leftpanel %}
 
 
-<div class = "inner_left_panel">
+<div class="inner_left_panel">
   <ul>    
-    <li class = "active">  <a href = "{% url page pages.slug %}"> Gallery </a> </li>
+    <li class="active">  <a href="{% url page pages.slug %}">Gallery</a></li>
   </ul>
 </div>
 
 {% endblock %}
-
 
 {% block main %}
 
@@ -29,8 +28,9 @@
     <div class = "gallery_content group">
       {% autopaginate all_photos  30  %}
       {% for image in all_photos  %}
-      <a class="grouped_elements fancybox" rel="group1" href="{{MEDIA_URL}}{{image.image}}" title ="{{image.caption}}">{% thumbnail image.image "136x105" as im %}	    <img src ="{{im.url}}"   />{% endthumbnail %}</a>
-      
+      <a class="grouped_elements fancybox" rel="group1" href="{{MEDIA_URL}}{{image.image}}" title ="{{image.caption}}">
+      <img src ="{{ MEDIA_URL }}{% thumbnail image.image 136 105 %}"/>
+      </a>
      {% endfor %}
     </div>
     
@@ -38,7 +38,6 @@
   {% paginate %}
   </div>
 <div class="clear"></div>
-
 
 {% endautoescape %}
 {% endblock %}

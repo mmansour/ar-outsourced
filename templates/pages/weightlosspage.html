@@ -2,7 +2,7 @@
 {% load mezzanine_tags %}
 {% load pagination_tags %}
 
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 {% block title %}Weightloss |AMANDA RUSSEL - All Things Fitness and Lifestyle{% endblock %}
 {% block main %}
 
@@ -14,11 +14,8 @@
     <ul>
       {% for weightloss in all_weightloss %}
       <li>
-	<div class = "small_thumb" style = "width:138px;"> <a href = "{% url page weightloss.slug %}">
-	    {% thumbnail weightloss.image "138x138" as im %}
-	    <img src ="{{ im.url }}"  />
-	    {% endthumbnail %}
-	  </a>
+	<div class="small_thumb" style="width:138px;">
+        <a href="{% url page weightloss.slug %}"><img src ="{{ MEDIA_URL }}{% thumbnail weightloss.image 138 138 %}"/></a>
 	</div>
 	<div class = "img_desc">
 	  <a href = {% url page weightloss.slug %}><h3> {{ weightloss.title }} </h3> </a>

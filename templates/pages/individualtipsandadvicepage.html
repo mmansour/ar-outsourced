@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load mezzanine_tags %}
 {% block leftpanel %}
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 {% if parentpage.parent.children.published %}
 <div class = "inner_left_panel">
   <ul>
@@ -22,9 +22,7 @@
   <div class = "inner_right_panel" >
     <h1> {{page.title}} </h1>
     <div class = "article_header">{% editable page.individualtipsandadvicepage.image %}
-      	    {% thumbnail page.individualtipsandadvicepage.image "640x480" as im %}
-	    <img src ="{{ im.url }}"  /></a>
-	  {% endthumbnail %}
+      	   <img src ="{{ MEDIA_URL }}{% thumbnail page.individualtipsandadvicepage.image 640 480 %}" />
          {% endeditable %}
     </div>
 

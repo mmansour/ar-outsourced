@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load pages_tags mezzanine_tags %}
 {% block leftpanel %}
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 <div class = "inner_left_panel">
       {% page_menu "pages/menus/individualsidebar.html" %}
 </div>
@@ -17,9 +17,7 @@
   <div class = "inner_right_panel" >
     <h1> {{ page.title }} </h1>
     <div class = "article_header">{% editable page.individualhealthylivingpage.image %}
-      	    {% thumbnail page.individualhealthylivingpage.image "640x480" as im %}
-	    <img src ="{{ im.url }}"  /></a>
-	  {% endthumbnail %}
+      	    <img src ="{{ MEDIA_URL }}{% thumbnail page.individualhealthylivingpage.image 640 480 %}" />
 {% endeditable %}</div>
     <div class = "article_content">
       {% editable page.individualhealthylivingpage.article %}{{ page.individualhealthylivingpage.article|safe }}{% endeditable %}

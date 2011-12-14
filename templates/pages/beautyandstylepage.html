@@ -2,7 +2,7 @@
 
 {% load mezzanine_tags %}
 {% load pagination_tags %}
-{% load thumbnail %}
+{#{% load thumbnail %}#}
 {% block title %}Beauty and Style |AMANDA RUSSEL - All Things Fitness and Lifestyle{% endblock %}
 {% block main %}
 
@@ -14,10 +14,8 @@
     <ul>
       {% for beauty in all_beauty %}
       <li>
-	<div class = "small_thumb" style = "width:138px;"> <a href = "{% url page beauty.slug %}">
-	    {% thumbnail beauty.image "138x138" as im %}
-	    <img src ="{{ im.url }}"  /></a>
-	  {% endthumbnail %}
+	<div class="small_thumb" style="width:138px;">
+        <a href="{% url page beauty.slug %}"><img src ="{{ MEDIA_URL }}{% thumbnail beauty.image 138 138 %}"/></a>
 	</div>
 	<div class = "img_desc">
 	  <a href = {% url page beauty.slug %}><h3> {{ beauty.title }} </h3> </a>
