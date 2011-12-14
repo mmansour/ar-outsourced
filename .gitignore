@@ -9,6 +9,7 @@
 *.swp
 *.psd
 *.pdf
+*.sql
 .idea/
 github-public.rtf
 manage.py
