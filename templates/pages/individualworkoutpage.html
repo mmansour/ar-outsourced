@@ -24,11 +24,12 @@
 {% autoescape off %}
 
 <div class = "inner_right_panel" >
-  <h1> {{ page.individualworkout.title }}</h1>
+  <h1> {{ page.individualworkoutpage.title }}</h1>
+<br /><br />
   <div class="article_header">{% editable page.individualworkoutpage.image %}
-{% thumbnail page.individualworkoutpage.image "640x480" as im %}
-	    <img src ="{{ im.url }}"  /></a>
-	  {% endthumbnail %}{% endeditable %}</div>
+  <img src ="{{ MEDIA_URL }}{% thumbnail page.individualworkoutpage.image 640 480 %}"/>
+  {% endeditable %}
+  </div>
            
   <div class = "article_content"> {% editable page.individualworkoutpage.article %}{{ page.individualworkoutpage.article|safe }}{% endeditable %}
     <div class = "steps">
@@ -37,7 +38,9 @@
 	<h3 class="georgia italic">{{ step.title }}</h3>
 	<p> {{ step.text }}</p>
       </div>
-      <div class="step_img"><img src="{{step.image.url}}" width="310" height="150" alt="Workouts_small banner" /></div>
+      <div class="step_img">
+          <img src="{{step.image.url}}" width="310" height="150" alt="{{ step.title }}" />
+      </div>
       <p class="clear"></p>
     {% endfor %}
     </div>
@@ -45,9 +48,6 @@
   <a href="{% url page parentpage.slug %}" class="fl_left martop"> <<  Back to Workouts</a>
 </div>
 
-
-    
-   
 <div class="clear"></div>
   <!-- left panel ends-->   
 
