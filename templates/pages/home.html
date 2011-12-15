@@ -33,51 +33,52 @@
     </div>{% editable page.homepage.upcoming_events %}{{ page.homepage.upcoming_events }}{% endeditable %}
 
     <div class="twitter_widget">
-      <ul class="tabs">
+     <ul class="tabs">
 	<li><a href="#tab1">Twitter</a></li>
-	<li><a href="#tab2">Facebook</a></li>
-	<li><a href="#tab3">Youtube</a></li>
+{#	<li><a href="#tab2">Facebook</a></li>#}
+{#	<li><a href="#tab3">Youtube</a></li>#}
       </ul>
 
       <div class="tab_container">
-	<div id="tab1" class="tab_content">
-	  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-	  <script>
-	    new TWTR.Widget({
-	    version: 2,
-	    type: 'profile',
-	    rpp: 4,
-	    interval: 30000,
-	    width: 250,
-	    height: 300,
-	    theme: {
-	    shell: {
-	    background: '#333333',
-	    color: '#ffffff'
-	    },
-	    tweets: {
-	    background: '#000000',
-	    color: '#ffffff',
-	    links: '#4aed05'
-	    }
-	    },
-	    features: {
-	    scrollbar: false,
-	    loop: false,
-	    live: false,
-	    behavior: 'all'
-	    }
-	    }).render().setUser('arfit').start();
-	  </script>
-	  <!--Content-->
-	</div>
-	<div id="tab2" class="tab_content">
-<!-- Facebook Badge START --><a href="http://www.facebook.com/pages/Amatuer-Readings/247749065280355" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Amatuer Readings">Amatuer Readings</a><br/><a href="http://www.facebook.com/pages/Amatuer-Readings/247749065280355" target="_TOP" title="Amatuer Readings"><img src="http://badge.facebook.com/badge/247749065280355.1659.1731732408.png" style="border: 0px;" /></a><br/><a href="http://www.facebook.com/business/dashboard/" target="_TOP" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" title="Make your own badge!">Promote Your Page Too</a>
-	</div>
-	<div id="tab3" class="tab_content">
-	  Youtube widget comes here
-	  <!--Content-->
-	</div>
+
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 3,
+          interval: 30000,
+          width: 250,
+          height: 250,
+          theme: {
+            shell: {
+              background: '#333333',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#ffffff',
+              color: '#333333',
+              links: '#1BACE3'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            behavior: 'all'
+          }
+        }).render().setUser('arFIT').start();
+        </script>
+{#	<div id="tab1" class="tab_content">#}
+{#    Twitter#}
+{#	</div>#}
+{#	<div id="tab2" class="tab_content">#}
+{#    <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Farussellfit&amp;width=292&amp;height=427&amp;colorscheme=dark&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:427px;" bqckground="red"></iframe>#}
+{#	</div>#}
+{#	<div id="tab3" class="tab_content">#}
+{#	  Youtube widget comes here#}
+{#	  <!--Content-->#}
+{#	</div>#}
       </div>
     </div>
             <!-- twitter widget ends here --> 
