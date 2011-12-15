@@ -200,11 +200,11 @@ class ShopPage(Page):
     pass
 
 CHOICE_TYPE_SELECT_HERE = "----Select Here----"
-CHOICE_TYPE_ENQUIRY = "General Enquiry"
+CHOICE_TYPE_ENQUIRY = "General Inquiry"
 CHOICE_TYPE_DETAILS = "Course Details"
 SUBJECT_CHOICES = (
     (CHOICE_TYPE_SELECT_HERE, _("----Select Here----")),
-    (CHOICE_TYPE_ENQUIRY, _("General Enquiry")),
+    (CHOICE_TYPE_ENQUIRY, _("General Inquiry")),
     (CHOICE_TYPE_DETAILS, _("Course Details")),
 )
 
