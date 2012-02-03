@@ -30,7 +30,7 @@ def listweightloss(request, page):
 
 @processor_for(WorkoutPage)
 def listworkouts(request, page):
-    all_workouts = IndividualWorkoutPage.objects.all().order_by("-published_date")
+    all_workouts = IndividualWorkoutPage.objects.all().order_by("-publish_date")
     return {"all_workouts": all_workouts}
 
 
