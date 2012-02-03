@@ -18,7 +18,7 @@ from models import HomePage, DropDownElement, IndividualWorkoutPage,\
 
 @processor_for(TipsAndAdvicePage)
 def listtips(request, page):
-    tips = IndividualTipsAndAdvicePage.objects.all().order_by("-publish_date")
+    tips = IndividualTipsAndAdvicePage.objects.all().order_by("-date_added")
     return {"all_tips": tips}
 
 
