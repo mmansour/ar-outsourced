@@ -24,13 +24,13 @@ def listtips(request, page):
 
 @processor_for(WeightLossPage)
 def listweightloss(request, page):
-    all_weightloss = IndividualWeightLossPage.objects.all().order_by("-publish_date")
+    all_weightloss = IndividualWeightLossPage.objects.all().order_by("-date_added")
     return {"all_weightloss": all_weightloss}
 
 
 @processor_for(WorkoutPage)
 def listworkouts(request, page):
-    all_workouts = IndividualWorkoutPage.objects.all().order_by("-publish_date")
+    all_workouts = IndividualWorkoutPage.objects.all().order_by("-date_added")
     return {"all_workouts": all_workouts}
 
 
@@ -43,43 +43,43 @@ def func(request, page):
 
 @processor_for(BeautyAndStylePage)
 def list_beautyandstyle(request, page):
-    all_beauty = IndividualBeautyAndStylePage.objects.all().order_by("-publish_date")
+    all_beauty = IndividualBeautyAndStylePage.objects.all().order_by("-date_added")
     return {"all_beauty": all_beauty}
 
 
 @processor_for(HotTopicPage)
 def list_hottopic(request, page):
-    all_hottopics = IndividualHotTopicPage.objects.all().order_by("-publish_date")
+    all_hottopics = IndividualHotTopicPage.objects.all().order_by("-date_added")
     return {"all_hottopics": all_hottopics}
 
 
 @processor_for(HealthyLivingPage)
 def list_healthyliving(request, page):
-    all_healthyliving = IndividualHealthyLivingPage.objects.all().order_by("-publish_date")
+    all_healthyliving = IndividualHealthyLivingPage.objects.all().order_by("-date_added")
     return {"all_healthyliving": all_healthyliving}
 
 
 @processor_for(RelationshipsPage)
 def list_relationships(request, page):
-    all_relationships = IndividualRelationshipPage.objects.all().order_by("-publish_date")
+    all_relationships = IndividualRelationshipPage.objects.all().order_by("-date_added")
     return {"all_relationships": all_relationships}
 
 
 @processor_for(GuiltyPleasuresPage)
 def list_guiltypleasures(request, page):
-    all_guiltypleasures = IndividualGuiltyPleasuresPage.objects.all().order_by("-publish_date")
+    all_guiltypleasures = IndividualGuiltyPleasuresPage.objects.all().order_by("-date_added")
     return {"all_guiltypleasures": all_guiltypleasures}
 
 
 @processor_for(DietTipsPage)
 def list_dietips(request, page):
-    all_diettips = IndividualDietTipsPage.objects.all().order_by("-publish_date")
+    all_diettips = IndividualDietTipsPage.objects.all().order_by("-date_added")
     return {"all_diettips": all_diettips}
 
 
 @processor_for(MealIdeasPage)
 def list_mealideas(request, page):
-    all_mealideas = IndividualMealIdeasPage.objects.all().order_by("-publish_date")
+    all_mealideas = IndividualMealIdeasPage.objects.all().order_by("-date_added")
     return {"all_mealideas": all_mealideas}
 
 
