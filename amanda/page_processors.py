@@ -212,12 +212,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True)[0]
-        videos = IndividualVideoPage.objects.all().exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
