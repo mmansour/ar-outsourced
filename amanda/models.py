@@ -110,6 +110,11 @@ class IndividualHotTopicPage(Page):
     article = RichTextField(_("Article"), default="")
     date_added = models.DateField(auto_now_add=True)
 
+class IndividualBioPage(Page):
+    image = models.ImageField(upload_to="bio")
+    article = RichTextField(_("Article"), default="")
+    date_added = models.DateField(auto_now_add=True)
+
 
 class RelationshipsPage(Page):
     pass

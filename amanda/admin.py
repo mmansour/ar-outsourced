@@ -13,7 +13,8 @@ from models import HomePage, DropDownElement, IndividualWorkoutPage, UpcomingEve
                    IndividualHotTopicPage, IndividualVideoPage, ConsultationPage, ShopPage,\
                    ContactPage, ContactEntries, AllVideoPage, AskAmandaVideoPage,\
                    FitnessVideoPage, LifestyleVideoPage, NutritionVideoPage,\
-                   ConsultationEntries,FoodAndLifeVideoPage,WorkoutsVideoPage
+                   ConsultationEntries,FoodAndLifeVideoPage,WorkoutsVideoPage,\
+                   IndividualBioPage
 
 admin.site.register(HomePage)
 
@@ -91,3 +92,4 @@ admin.site.register(NutritionVideoPage)
 admin.site.register(FoodAndLifeVideoPage)
 admin.site.register(WorkoutsVideoPage)
 admin.site.register(Step)
+admin.site.register(IndividualBioPage)

@@ -13,7 +13,8 @@ from models import HomePage, DropDownElement, IndividualWorkoutPage,\
                    IndividualHotTopicPage, IndividualVideoPage, ConsultationPage, ShopPage,\
                    ContactPage, ContactEntries, AllVideoPage, AskAmandaVideoPage,\
                    FitnessVideoPage, LifestyleVideoPage, NutritionVideoPage,\
-                   ConsultationEntries,FoodAndLifeVideoPage,WorkoutsVideoPage
+                   ConsultationEntries,FoodAndLifeVideoPage,WorkoutsVideoPage,\
+                    IndividualBioPage
 
 
 @processor_for(TipsAndAdvicePage)
@@ -104,6 +105,11 @@ def func(request, page):
 @processor_for(IndividualHotTopicPage)
 def func(request, page):
     parentpage = HotTopicPage.objects.all()[0]
+    return {"parentpage": parentpage}
+
+@processor_for(IndividualBioPage)
+def func(request, page):
+    parentpage = AboutPage.objects.all()[0]
     return {"parentpage": parentpage}
 
 

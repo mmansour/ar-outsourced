@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load pages_tags mezzanine_tags %}
+{% block leftpanel %}
+{#{% load thumbnail %}#}
+<div class = "inner_left_panel">
+      {% page_menu "pages/menus/individualsidebar.html" %}
+</div>
+
+{% endblock %}
+
+
+
+
+{% block main %}
+
+{% autoescape off %}
+
+  <!-- right panel -->       
+
+  <div class = "inner_right_panel" >
+    <h1> {{ page.title }} </h1>
+    <div class = "article_header">{% editable page.individualbiopage.image %}
+      	    <img src ="{{ MEDIA_URL }}{% thumbnail page.individualbiopage.image 640 480 %}" />
+{% endeditable %}</div>
+    <div class = "article_content">
+      {% editable page.individualbiopage.article %}{{ page.individualbiopage.article|safe }}{% endeditable %}
+    </div>
+
+<a href="{% url page parentpage.slug %}" class="fl_left martop">« Back to Hot Topic</a>  
+
+  </div>
+<div class = "clear"> </div>
+
+{% endautoescape %}
+{% endblock %}
