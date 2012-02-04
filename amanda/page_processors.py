@@ -227,12 +227,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Ask Amanda")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Ask Amanda").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="Ask Amanda").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Ask Amanda").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Ask Amanda").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="Ask Amanda").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -242,12 +242,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Fitness")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Fitness").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -257,12 +257,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="LifeStyle")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="LifeStyle").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="LifeStyle").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except IndexError:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="LifeStyle").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="LifeStyle").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="LifeStyle").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -276,12 +276,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Nutrition")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Nutrition").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="Nutrition").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Nutrition").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Nutrition").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="Nutrition").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -290,12 +290,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Food And Life")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Food And Life").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="Food And Life").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Food And Life").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Food And Life").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="Food And Life").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -304,12 +304,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Workouts")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title)
+        videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title).order_by("-uploaded_date")
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Workouts").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title)
+            videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title).order_by("-uploaded_date")
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
