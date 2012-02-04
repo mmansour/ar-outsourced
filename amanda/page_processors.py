@@ -242,12 +242,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Fitness")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title).order_by("-uploaded_date")
+        videos = IndividualVideoPage.objects.all().filter(type="Fitness").order_by("-uploaded_date").exclude(title=featured_video.title)
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Fitness").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Fitness").exclude(title=featured_video.title).order_by("-uploaded_date")
+            videos = IndividualVideoPage.objects.all().filter(type="Fitness").order_by("-uploaded_date").exclude(title=featured_video.title)
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
@@ -304,12 +304,12 @@ def func(request, page):
 def func(request, page):
     try:
         featured_video = IndividualVideoPage.objects.all().filter(featured=True, type="Workouts")[0]
-        videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title).order_by("-uploaded_date")
+        videos = IndividualVideoPage.objects.all().filter(type="Workouts").order_by("-uploaded_date").exclude(title=featured_video.title)
         return {"videos": videos, "featured_video": featured_video}
     except:
         try:
             featured_video = IndividualVideoPage.objects.all().filter(type="Workouts").order_by("-uploaded_date")[0]
-            videos = IndividualVideoPage.objects.all().filter(type="Workouts").exclude(title=featured_video.title).order_by("-uploaded_date")
+            videos = IndividualVideoPage.objects.all().filter(type="Workouts").order_by("-uploaded_date").exclude(title=featured_video.title)
             return {"videos": videos, "featured_video": featured_video}
         except:
             pass
