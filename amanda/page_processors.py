@@ -109,7 +109,7 @@ def func(request, page):
 
 @processor_for(IndividualBioPage)
 def func(request, page):
-    parentpage = AboutPage.objects.all()[0]
+    parentpage = IndividualBioPage.objects.all().filter(title='Bio')[0]
     return {"parentpage": parentpage}
 
 
