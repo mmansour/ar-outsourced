@@ -18,8 +18,6 @@ settings.py
 local_settings.py
 urls.py
 log/
-site_media/
-!site_media/css/*
-!site_media/js/*
+site_media/images/
 migrations/
 
