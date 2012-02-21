@@ -59,6 +59,7 @@ div.header{ }
 div.header .socialmedia{width:250px; float:right;}
 div.header .socialmedia ul{margin:0px; padding:0px; float:right; margin:115px 24px 0 0;}
 div.header .socialmedia ul li{display:inline; margin:0 0 0 15px;}
+div.header .newsletter img{width:338px; height:87px; position:absolute; top:0; margin-left: 81px;}
 .maincontent{clear:both; width:960px; }
 .left_panel{width:600px; float:left; margin-left:20px;}
 .right_panel{width:300px; float:right;  margin-right:20px;}
