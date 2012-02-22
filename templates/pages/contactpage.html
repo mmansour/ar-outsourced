@@ -9,7 +9,13 @@
   <h1>Contact</h1>
   <div class = "contact_page">
     <div class = "left">
-      <h2> Send a Message </h2>
+      <h2>Stay motivated EVERY week with me, join my newsletter and receive:</h2>
+        <ul>
+            <li>Access to Great Giveaways and promotions</li>
+            <li>New FREE workout videos EVERY week</li>
+            <li>FREE diet tips and recipes</li>
+            <li>Inspiration and support to keep you motivated</li>
+        </ul>
       {% csrf_token %}
       <form action = "" method = "POST"> {% csrf_token %}
 	{% for field in contactform %}
