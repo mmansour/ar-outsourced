@@ -10,12 +10,12 @@
   <div class = "contact_page">
     <div class = "left">
       <h2>Stay motivated EVERY week with me, join my newsletter!</h2>
-        {% comment %}<ul>
+        <ul>
             <li>Access to Great Giveaways and promotions</li>
             <li>New FREE workout videos EVERY week</li>
             <li>FREE diet tips and recipes</li>
             <li>Inspiration and support to keep you motivated</li>
-        </ul>{% endcomment %}
+        </ul>
       {% csrf_token %}
       <form action = "" method = "POST"> {% csrf_token %}
 	{% for field in contactform %}

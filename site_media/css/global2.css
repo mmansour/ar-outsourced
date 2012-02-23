@@ -108,7 +108,7 @@ div.header .newsletter img{width:338px; height:87px; position:absolute; top:0; m
 .contact_page em{font-style:italic;}
 .contact_page .left{width:320px; margin-right:20px; float:left;  margin-bottom:30px; padding-left:180px; background:url(../images/amanda_contact.jpg) no-repeat; min-height:500px;}
 .contact_page .right{width:200px; float:right;  margin-bottom:30px; }
-/*.contact_page form{margin-left: 27px;}*/
+.contact_page form{margin-left: 37px;}
 .italic_heading{font:11px Georgia, "Times New Roman", Times, serif; font-style:italic; color:#666666; display:block; margin-top:10px; clear:both;}
 .morevideos{width:660px; display:block;}
 .morevideos ul{margin:0px; padding:0px; margin-top:10px; margin-bottom:20px;}
