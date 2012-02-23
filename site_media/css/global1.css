@@ -1,0 +1,222 @@
+/*
+1. 	Document Setup (body, common classes, vertical rhythm, structure etc) 
+------------------------------------------------------------------------------------------*/
+body{ background-color:#f3f3f3; font:12px Tahoma, Arial, Verdana, Sans-serif; line-height:16px; }
+.pagewrap{ background:url("../images/background.png") repeat-y; padding: 10px 15px 0px 15px; width:960px; margin:0px auto; }
+.bottom_shadow{clear:both; width:990px; margin:0px auto; background: url("../images/bottom_bg.png") no-repeat; height:24px;}
+p{ font:12px Tahoma, Arial, Verdana, Sans-serif; line-height:16px; margin:3px 0 8px 0;}
+p.copyright{font:11px Tahoma, Arial, Verdana, Sans-serif; color:#999999; line-height:40px; text-align:center; clear:both;}
+
+
+/*-----------------------------------------------------------------------------------------
+2. 	Header styles                                                         
+------------------------------------------------------------------------------------------*/
+h1 { font-size:2.3em; background:#fff200; font-family: 'Lato', Arial,Helvetica,Tahoma,sans-serif;
+    text-transform:uppercase; padding:5px; margin-bottom:20px; line-height:31px; letter-spacing: 2px;}
+h2 { font-family: Georgia, Helvetica, Arial, sans-serif; font-size:13px; font-weight:bold; font-style:italic; line-height:18px; color:#00aeef; margin:0px 0 10px 0;}
+h3 { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;  color:#1bace3; line-height:18px;}
+h4 { font-family: 'HelveticaNeueLTStd77BdCn', Helvetica, Arial, sans-serif; font-size:14px; }
+h5 { font-family: Arial, sans-serif; font-size:14px; line-height:24px; }
+h6 { font-family:  Arial, sans-serif; font-size:14px;  }
+
+
+/*-----------------------------------------------------------------------------------------
+3. 	Navigation styles                                                    
+------------------------------------------------------------------------------------------*/
+
+div.topnav{clear:both; width:960px; margin:0px auto; margin:15px 0 0px 0; display:block;height:37px;:url(../images/nav_bg.png) repeat-x; height:37px;}
+
+/* 	LEVEL ONE*/
+ul.tree-menu-level-0  { position: relative; margin-left:-1px; }
+ul.tree-menu-level-0  li {  float: left; zoom: 1;  width:120px; background:url(../images/nav_bg.png) repeat-x; height:37px; line-height:37px; }
+ul.tree-menu-level-0  li.active {  float: left; zoom: 1;  width:120px; background:url(../images/nav_bg.png) 0px -37px; height:37px; line-height:37px; }
+ul.tree-menu-level-0  a:hover	{ color: #000;  }
+ul.tree-menu-level-0  a:active { color: #ffa500; }
+ul.tree-menu-level-0  li a { display: block;  border-right: 1px solid #86888a;  border-left: 1px solid #bdbec1;text-align:center;	  color: #fff; }
+ul.tree-menu-level-0  li:last-child a { border-right: none; } /* Doesn't work in IE */
+ul.tree-menu-level-0  li.hover,
+ul.tree-menu-level-0  li:hover{ background:url(../images/nav_bg.png) 0px -37px; color: black; position: relative; }
+ul.tree-menu-level-0 li.hover a { color: #fff; }
+
+
+/* 	LEVEL TWO*/
+ul.tree-menu-level-0  ul { width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.tree-menu-level-0  ul li { font-weight: normal; background: #808080; color: #fff; border-bottom: 1px solid #fff; float: none; }
+ul.tree-menu-level-0  ul li :hover{background: #1aace3; color: #fff; }						  
+/* IE 6 & 7 Needs Inline Block */
+ul.tree-menu-level-0  ul li a	{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 	LEVEL THREE*/
+ul.dropdown ul ul{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul { visibility: visible; }
+
+
+/*-----------------------------------------------------------------------------------------
+4. 	Main Content styles                                                     
+------------------------------------------------------------------------------------------*/
+div.header{ }
+.logo{ float:left; margin:-5px 0 -7px 0; overflow: hidden;}
+div.header .socialmedia{width:250px; float:right;}
+div.header .socialmedia ul{margin:0px; padding:0px; float:right; margin:115px 24px 0 0;}
+div.header .socialmedia ul li{display:inline; margin:0 0 0 15px;}
+div.header .newsletter img{width:338px; height:87px; position:absolute; top:0; margin-left: 81px;}
+.maincontent{clear:both; width:960px; }
+.left_panel{width:600px; float:left; margin-left:20px;}
+.right_panel{width:300px; float:right;  margin-right:20px;}
+.inner_left_panel{width:115px; float:left; padding-left:5px; background:url("../images/bg_leftpanel.png") repeat-x; min-height:900px;}
+.inner_left_panel ul{margin-top:90px;}
+.inner_left_panel ul li{margin-bottom:15px;  cursor:pointer;}
+.inner_left_panel ul li a{color:#000;padding: 0 0 0 10px; line-height:21px; }
+.inner_left_panel ul li a:hover{color:#000;}
+.inner_left_panel ul li:hover{background:#fff; }
+.inner_left_panel ul li.active{background:#fff;}
+.inner_right_panel{width:790px; float:right;  padding-left:50px; padding-top:20px;}
+.videoplayer{width:600px; min-height:380px; display:block; clear:both;}
+.latest_tips_banner{width:600px; height:101px; display:block; cursor:pointer;  clear:both; margin-top:18px;}
+.learnmore_banner{width:600px; height:281px; display:block;cursor:pointer; margin-top:10px;  clear:both;}
+.photos_banner{width:600px; height:145px; display:block; cursor:pointer; margin-top:10px;  clear:both;}
+.upcoming_events{width:300px; margin: 0 0 10px 0;}
+.image_grid{ padding:0px; margin: 0 0 0 -28px;}
+.image_grid ul{margin:0px; padding:0px;}
+.image_grid ul li{width:350px; height:150px; display:block;  float:left; margin:20px 20px 20px 0px; }
+.img_desc{width:180px;  padding:0 10px 0 10px; float:right; }
+.small_thumb{width:138px; height:138px; float:left; }
+.article_header{width:620px;  display:block; margin-bottom:20px;}
+.article_content{width:640px;}
+.article_content strong{font-weight:bold;}
+.article_content em{font-style:italic;}
+.article_content ol{margin:10px 0 0 30px}
+.article_content ol li{ list-style-type:decimal; }
+.article_content ul{margin:10px 0 0 30px}
+.article_content ul li{ list-style-type:disc; }
+.gallery_content{width:740px; padding:10px;}
+.gallery_content a{width:136px; height:105px; margin:0 10px 10px 0; float:left;-moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px#888;box-shadow: 0 0 5px #888;text-align:center;}
+.inner_right_panel{}
+.inner_right_panel ol{margin:10px 0 0 30px}
+.inner_right_panel ol li{ list-style-type:decimal; }
+.inner_right_panel ul{margin:10px 0 0 30px}
+.inner_right_panel ul li{ list-style-type:disc; }
+.steps{width:610px; clear:both; display:block; margin-top:20px;}
+.steps .step_desc{width:280px; float:left; margin-right:10px; min-height:150px; margin-top:10px;}
+.steps .step_img{width:310px; float:right;margin-top:10px; }
+.ar_video{width:640px; height:380px; display:block;}
+.upcomingevents{width:760px; display:block;}
+.upcomingevents .left{width:440px; margin-right:20px; float:left;  margin-bottom:30px;}
+.upcomingevents .right{width:300px; float:right;  margin-bottom:30px; }
+.contact_page{width:760px; display:block;}
+.contact_page strong{font-weight:bold;}
+.contact_page em{font-style:italic;}
+.contact_page .left{width:320px; margin-right:20px; float:left;  margin-bottom:30px; padding-left:180px; background:url(../images/amanda_contact.jpg) no-repeat; min-height:500px;}
+.contact_page .right{width:200px; float:right;  margin-bottom:30px; }
+/*.contact_page form{margin-left: 27px;}*/
+.italic_heading{font:11px Georgia, "Times New Roman", Times, serif; font-style:italic; color:#666666; display:block; margin-top:10px; clear:both;}
+.morevideos{width:660px; display:block;}
+.morevideos ul{margin:0px; padding:0px; margin-top:10px; margin-bottom:20px;}
+.morevideos ul li{width:200px; min-height:160px; margin-right:20px; list-style-type:none; float:left;}
+.morevideos hr {background-color:#ccc;border-width:0;color:#444;height:2px;line-height:0;margin:10px 0 0 0;page-break-after:always;text-align:center;width:640px;}
+
+
+/*-----------------------------------------------------------------------------------------
+5. 	Footer styles                                                        
+------------------------------------------------------------------------------------------*/
+div#footer{width:960px;padding: 10px 15px 0px 15px; margin:0px auto; clear:both;}
+div#footer ul {width:118px; float:left;}
+div#footer ul li{font-family:Georgia, "Times New Roman", Times, serif; font-size:11px; font-style:italic; color:#808080; line-height:18px; }
+div#footer ul li a{ color:#808080;}
+div#footer ul li a:hover{color:#000;}
+
+
+
+/*-----------------------------------------------------------------------------------------
+6. Pagination                                        
+------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------
+6. Pagination                                        
+------------------------------------------------------------------------------------------*/
+.pagination{width: 700px;background-color: #FFFFFF;text-align: center;font-size: 10px;margin-bottom: 5px;padding: 10px;clear:both;}
+/* Pagination Link */
+.pagination a {font-size: 11px;font-weight:bold;text-decoration: none;color: #2ab2e5;padding: 3px;-moz-border-radius: 3px;margin:0 3px 0 3px;clear:both;margin-top:-20px;}
+.pagination a:hover {font-size: 11px;text-decoration: none;color: #000000;background-color: white;padding: 3px;-moz-border-radius: 3px;}
+/* Pagination Current Page */
+.pagination a.current {font-size: 11px;text-decoration: none;font-weight: bold;color: #000000;text-decoration:underline;padding: 3px;-moz-border-radius: 3px;}
+/* Pagination Disabled Page */
+.pagination  span.disabled {font-size: 10px;text-decoration: none;color: #C6C7C7;border: 1px solid #C6C7C7;background-color: white;padding: 3px;-moz-border-radius:3px; }
+.prev {float:left;}
+.pagination span.next {float:right;}
+.pagination a.next {float:right;}
+/*-----------------------------------------------------------------------------------------
+7. Miscelleaneous styles                                          
+------------------------------------------------------------------------------------------*/
+a{ text-decoration: none; color:#1BACE3; }
+a:hover{ text-decoration: none; color:#000; }
+ul{ list-style: none; }
+.martop{margin-top:15px;}							
+.clear{clear:both;}
+.bold{font-weight:bold;}
+.blue{color:#00aeef; text-decoration:none;}
+.blue:hover{color:#000; text-decoration:none; cursor:pointer;}
+.italic{font-style:italic;}
+.georgia{ font-family: Georgia, Helvetica, Arial, sans-serif; font-size:12px; font-style:italic; line-height:18px; }
+.fl_right{float:right;}
+.fl_left{float:left;}
+.box_shadow{-moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px#888;box-shadow: 0 0 5px #888; width:250px; padding:20px; margin-top:20px; text-align:center;}
+blockquote.consultation{font: 18px Georgia, "Times New Roman", Times, serif; line-height:24px;color:#666666;font-style:italic;  margin: 5px 5px 15px 5px;}
+blockquote.consultation p{font: 18px Georgia, "Times New Roman", Times, serif; line-height:24px;color:#666666;font-style:italic;  margin: 5px 5px 15px 5px;}
+
+form{ width:100%;}
+label{width:100%; display:block; margin-top:10px;}
+input.textfield{width:95%;}
+select.textfield{width:95%;}
+.send_btn{width:73px; height:21px; cursor:pointer; margin-top:10px; margin-right:10px;}
+
+
+/* ---------------------------------------------------------------------------------------
+8. Clear fix
+------------------------------------------------------------------------------------------*/
+.group:after { visibility: hidden; display: block;  content: "";  clear: both;   height: 0; }
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+#twtr-widget-1 .twtr-doc, #twtr-widget-1 .twtr-hd a, #twtr-widget-1 h3, #twtr-widget-1 h4{background-color:#1BACE3;}
+
+/* ---------------------------------------------------------------------------------------
+9. Twitter Widget customization
+------------------------------------------------------------------------------------------*/
+
+#tweets { width: 300px;    margin: 0 auto; }  
+#tweets .twtr-widget, #tweets .twtr-doc {    width: 100%;     height: auto; }  
+#tweets .twtr-hd { background: #00AEEF; color: #fff;  -moz-border-radius: 6px 6px 0 0;  border-radius: 6px 6px 0 0;  font-family: Georgia, serif; }  
+#tweets .twtr-hd *, #tweets .twtr-hd h4 a {    background: #00AEEF !important; }  
+#tweets .twtr-hd h3, #tweets .twtr-hd h4 {  font-weight: normal;    text-align: center; }  
+#tweets .twtr-hd h3 {  background: #fff !important;   color: #333 !important;    font-size: 1.5em !important;    padding: 0.2em !important;   -moz-border-radius: 3px; 
+    border-radius: 3px; } 
+
+#tweets .twtr-tweet {  background: #fff; } 
+ 
+#tweets .twtr-tweet a:link, 
+#tweets .twtr-tweet a:visited, 
+#tweets .twtr-tweet a:hover {  color: #c40 !important; } 
+ 
+#tweets .twtr-tweet .twtr-tweet-text { border-bottom: 2px dashed #666 !important;  padding-bottom: 4px !important; }  
+#tweets .twtr-tweet .twtr-tweet-text p { color: #333 !important; } 
+ul.errorlist{color:red; list-style-type:none;}
+
+/* ---------------------------------------------------------------------------------------
+10. widget jquery styles
+------------------------------------------------------------------------------------------*/
+.twitter_widget{width:300px; background:url("../images/twitter_widgetbg.jpg") repeat-x; min-height:400px;
+    margin: auto; padding: 15px 0 0 0;}
+ul.tabs {margin: auto;
+    padding: 0;	list-style: none; height: 32px; /*--Set height of tabs--*/width: 250px;}
+ul.tabs li {	float:left ; margin: 0px auto;	padding: 0;	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/	border-left: none;	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;	position: relative;	background: #1CAAE3;	width:83px;	text-align:center;	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;}
+ul.tabs li a {	text-decoration: none;	color: #000;	display: block;	font-size: 12px;	font-weight:bold;	padding: 0 10px;	 /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;}
+ul.tabs li a:hover {	background: #ccc;	border-top-left-radius: 10px;	border-top-right-radius: 10px;}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;	 /*--Makes the active tab look like it's connected with its content--*/}
+.tab_container {	border-top: none;	overflow: hidden;	clear: both;		width:249px; 	margin:0px auto;	margin-top:-1px;}
+.tab_content {	margin:0px auto; font-size: 1.2em;}
+
