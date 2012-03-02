@@ -186,15 +186,16 @@ def func(request, page):
         list = utils.get_connection().get_list_by_id(MAILCHIMP_LIST_ID)
     except Exception, e:
         stdout.write("Error getting mailchimp list: {0}".format(e))
-    print 'list {0}'.format(list)
+#    print 'list {0}'.format(list)
     contactform = ContactForm()
     if request.method == "POST":
         contactform = ContactForm(request.POST)
-        print contactform
+#        print contactform
         if contactform.is_valid():
             contact = contactform.save()
             try:
                 list.subscribe(contact.email,{'FNAME':contact.name, 'EMAIL':contact.email})
+                stdout.write("User subscribed to mailchimp {0}".format(contact.email))
             except Exception, e:
                 stdout.write("Error subscribing to mailchimp list {0}".format(e))
             email_subject = "You have a new contact  request"
