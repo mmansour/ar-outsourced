@@ -1,5 +1,5 @@
 from django.core.mail import mail_managers
-from mailchimp import utils
+#from mailchimp import utils
 from sys import stdout
 from django.forms import ModelForm
 from mezzanine.pages.page_processors import processor_for
@@ -181,11 +181,11 @@ class ContactForm(ModelForm):
 
 @processor_for(ContactPage)
 def func(request, page):
-    MAILCHIMP_LIST_ID = '07c04a0064'
-    try:
-        list = utils.get_connection().get_list_by_id(MAILCHIMP_LIST_ID)
-    except Exception, e:
-        stdout.write("Error getting mailchimp list: {0}".format(e))
+#    MAILCHIMP_LIST_ID = '07c04a0064'
+#    try:
+#        list = utils.get_connection().get_list_by_id(MAILCHIMP_LIST_ID)
+#    except Exception, e:
+#        stdout.write("Error getting mailchimp list: {0}".format(e))
 #    print 'list {0}'.format(list)
     contactform = ContactForm()
     if request.method == "POST":
@@ -193,11 +193,11 @@ def func(request, page):
 #        print contactform
         if contactform.is_valid():
             contact = contactform.save()
-            try:
-                list.subscribe(contact.email,{'FNAME':contact.name, 'EMAIL':contact.email})
-                stdout.write("User subscribed to mailchimp {0}".format(contact.email))
-            except Exception, e:
-                stdout.write("Error subscribing to mailchimp list {0}".format(e))
+#            try:
+#                list.subscribe(contact.email,{'FNAME':contact.name, 'EMAIL':contact.email})
+#                stdout.write("User subscribed to mailchimp {0}".format(contact.email))
+#            except Exception, e:
+#                stdout.write("Error subscribing to mailchimp list {0}".format(e))
             email_subject = "You have a new contact  request"
             email_body = """
                          %s would like to contact you
