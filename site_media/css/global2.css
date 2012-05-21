@@ -114,7 +114,7 @@ div.header .newsletter img{width:338px; height:87px; position:absolute; top:0; m
 .morevideos ul{margin:0px; padding:0px; margin-top:10px; margin-bottom:20px;}
 .morevideos ul li{width:200px; min-height:160px; margin-right:20px; list-style-type:none; float:left;}
 .morevideos hr {background-color:#ccc;border-width:0;color:#444;height:2px;line-height:0;margin:10px 0 0 0;page-break-after:always;text-align:center;width:640px;}
-
+#shop_affiliates img{float:left; margin: 27px 0 0 0;}
 
 /*-----------------------------------------------------------------------------------------
 5. 	Footer styles                                                        
