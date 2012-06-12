@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load pages_tags mezzanine_tags %}
-{% block leftpanel %}
 
 {% block meta_title %}
     {{ page.title }} |
 {% endblock %}
+
+{% block leftpanel %}
 
 <div class = "inner_left_panel">
       {% page_menu "pages/menus/individualvideosidebar.html" %}
