@@ -3,6 +3,10 @@
 {% extends "base.html" %}
 {% load mezzanine_tags %}
 
+{% block meta_title %}
+    {{ page.title }} |
+{% endblock %}
+
 {% block main %}
 
 {% autoescape off %}

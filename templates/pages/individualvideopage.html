@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load pages_tags mezzanine_tags %}
+
+{% block meta_title %}
+    {{ page.title }} |
+{% endblock %}
+
 {% block leftpanel %}
 
 <div class = "inner_left_panel">

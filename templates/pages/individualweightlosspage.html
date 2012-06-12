@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load mezzanine_tags %}
 {#{% load thumbnail %}#}
+
+{% block meta_title %}
+    {{ page.title }} |
+{% endblock %}
+
 {% block leftpanel %}
 
 {% if parentpage.parent.children.published %}

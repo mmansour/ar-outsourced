@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load mezzanine_tags %}
+
+{% block meta_title %}
+    {{ page.title }} |
+{% endblock %}
+
 {% block leftpanel %}
 {#{% load thumbnail %}#}
 {% if parentpage.parent.children.published %}
