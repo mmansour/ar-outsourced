@@ -5,6 +5,9 @@
     {{ page.title }} |
 {% endblock %}
 
+{% block meta_description %}{{ page.individualtipsandadvicepage.article|truncatewords:30|safe }}{% endblock %}
+
+
 {% block leftpanel %}
 {#{% load thumbnail %}#}
 {% if parentpage.parent.children.published %}

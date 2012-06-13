@@ -6,6 +6,9 @@
     {{ page.title }} |
 {% endblock %}
 
+{% block meta_description %}{{ page.individualweightlosspage.article|truncatewords:30|safe }}{% endblock %}
+
+
 {% block leftpanel %}
 
 {% if parentpage.parent.children.published %}

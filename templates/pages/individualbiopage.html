@@ -5,6 +5,9 @@
     {{ page.title }} |
 {% endblock %}
 
+{% block meta_description %}{{ page.individualbiopage.article|truncatewords:30|safe }}{% endblock %}
+
+
 
 {% block leftpanel %}
 {#{% load thumbnail %}#}

@@ -5,6 +5,9 @@
     {{ page.title }} |
 {% endblock %}
 
+{% block meta_description %}{{ page.individualguiltypleasures.article|truncatewords:30|safe }}{% endblock %}
+
+
 {% block leftpanel %}
 
 <div class = "inner_left_panel">
