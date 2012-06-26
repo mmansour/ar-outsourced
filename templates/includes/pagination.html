@@ -12,7 +12,7 @@
             {% ifequal page current_page.number %}
             <strong>{{ page }}</strong>
             {% else %}
-            <a href="?page={{ page }}&{{ querystring }}">{{ page }}</a>
+            <a href="?page={{ page }}&{{ querystring }}" rel="next">{{ page }}</a>
             {% endifequal %}
         </li>
         {% endfor %} 
