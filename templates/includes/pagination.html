@@ -5,7 +5,7 @@
         {{ current_page.paginator.num_pages }}:</p>
     <ul>
         {% if current_page.has_previous %}
-        <li><a href="?page={{ current_page.previous_page_number }}&{{ querystring }}">&lt;</a></li>
+        <li><a href="?page={{ current_page.previous_page_number }}&{{ querystring }}" rel="prev">&lt;</a></li>
         {% endif %}
         {% for page in current_page.visible_page_range %}
         <li>
@@ -17,7 +17,7 @@
         </li>
         {% endfor %} 
         {% if current_page.has_next %}
-        <li><a href="?page={{ current_page.next_page_number }}&{{ querystring }}">&gt;</a></li>
+        <li><a href="?page={{ current_page.next_page_number }}&{{ querystring }}" rel="next">&gt;</a></li>
         {% endif %}
     </ul>
 </div>
